@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍻</text></svg>">
+    <meta charset="UTF-8">
+    <title>Painel Admin</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<div class="confirm-container">
+
+    <!-- BOTÃO VOLTAR -->
+    <button id="btnVoltar" class="btn-voltar">← Voltar</button>
+
+    <!-- AÇÕES ADMIN -->
+    <div id="adminActions" class="admin-actions" style="display:none;">
+        <button onclick="sairAdmin()" class="admin-btn sair">
+            Sair
+        </button>
+
+        <button onclick="limparLista()" class="admin-btn danger">
+            Limpar lista
+        </button>
+    </div>
+
+    <h1>Lista de Presença</h1>
+    <p class="confirm-subtitle">
+        Acesso restrito ao administrador
+    </p>
+
+    <div id="loginAdmin">
+        <div class="field">
+            <input type="password" id="senha" placeholder="Senha do admin">
+        </div>
+
+        <button onclick="verLista()" class="confirm-btn">
+            Entrar
+        </button>
+    </div>
+
+    <div id="resumoAdmin" class="resumo-admin" style="display:none;">
+        <div class="resumo-item">
+            <strong id="totalConvidados">0</strong>
+            <span>Confirmados</span>
+        </div>
+
+        <div class="resumo-item">
+            <strong id="totalAcompanhantes">0</strong>
+            <span>Acompanhantes</span>
+        </div>
+    </div>
+
+    <div id="lista" class="lista-admin" style="display:none;"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

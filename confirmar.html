@@ -1,0 +1,45 @@
+    <!DOCTYPE html>
+    <html lang="pt-BR">
+    <head>
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍻</text></svg>">
+        <meta charset="UTF-8">
+        <title>Confirmar Presença</title>
+        <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+    <div class="confirm-container">
+        <h1>Confirmar Presença</h1>
+        <p class="confirm-subtitle">
+            Preencha seus dados para garantir sua presença nessa noite especial
+        </p>
+
+        <form id="formPresenca">
+
+            <div class="field">
+                <input type="text" id="nome" placeholder="Nome" required>
+            </div>
+
+            <div class="field">
+                <input type="text" id="sobrenome" placeholder="Sobrenome" required>
+            </div>
+
+            <div class="check-group">
+                <input type="checkbox" id="acompanhante">
+                <label for="acompanhante">Vou levar acompanhante</label>
+            </div>
+
+            <div class="field" id="campoAcompanhante" style="display:none;">
+                <input type="text" id="nomeAcompanhante" placeholder="Nome do acompanhante">
+            </div>
+
+            <button type="submit" class="confirm-btn">
+                Confirmar Presença
+            </button>
+
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+    </body>

@@ -1,0 +1,662 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+}
+
+/* ===== FUNDO ===== */
+body {
+    background: linear-gradient(135deg, #0c2a22, #103a30, #0e1f1a);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+/* ===== CARD PRINCIPAL ===== */
+.container {
+    background: linear-gradient(180deg, #071814, #0c2a22);
+    padding: 35px 30px;
+    border-radius: 18px;
+    width: 100%;
+    max-width: 420px;
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.45);
+}
+
+/* ===== TEXTOS ===== */
+h1 {
+    font-size: 28px;
+    margin-bottom: 6px;
+    font-weight: 700;
+}
+
+.subtitle {
+    font-size: 15px;
+    margin-bottom: 22px;
+    color: #b9d6c9;
+}
+
+.invite-text.highlight {
+    font-size: 16px;
+    color: #eaf6f1;
+    font-weight: 500;
+    line-height: 1.6; /* espaçamento geral */
+}
+
+.invite-text.highlight span {
+    display: block;
+    margin-top: 10px; /* 👈 espaço entre as frases */
+    font-size: 14px;
+    color: #8fd6b5;
+}
+
+.info p {
+    margin: 8px 0;
+    font-size: 15px;
+    color: #d3eadd;
+}
+
+/* ===== AÇÕES (ÍCONE + TEXTO) ===== */
+.actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 18px;
+    margin-top: 35px;
+}
+
+.action-item {
+    text-decoration: none;
+    color: #d3eadd;
+    text-align: center;
+    flex: 1;
+}
+
+/* ÍCONE */
+.icon-circle {
+    width: 78px;
+    height: 78px;
+    background: linear-gradient(135deg, #2ea36a, #1f7a52);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    margin: 0 auto 10px auto;
+    color: #ffffff;
+    box-shadow: 0 10px 20px rgba(46,163,106,0.35);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.action-item span {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    line-height: 1.3;
+}
+
+/* HOVER */
+.action-item:hover .icon-circle {
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 15px 30px rgba(46,163,106,0.45);
+}
+
+/* ===== RODAPÉ ===== */
+.footer {
+    margin-top: 25px;
+    font-size: 13px;
+    color: #a7cbbd;
+}
+
+
+/* ===== CONFIRMAÇÃO DE PRESENÇA ===== */
+
+.confirm-container {
+    background: linear-gradient(180deg, #071814, #0c2a22);
+    padding: 35px 30px;
+    border-radius: 18px;
+    width: 100%;
+    max-width: 420px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+.confirm-container h1 {
+    font-size: 26px;
+    margin-bottom: 8px;
+}
+
+.confirm-subtitle {
+    font-size: 14px;
+    color: #b9d6c9;
+    margin-bottom: 25px;
+}
+
+.field {
+    margin-bottom: 15px;
+}
+
+.field input {
+    width: 100%;
+    padding: 14px;
+    border-radius: 12px;
+    border: 1px solid transparent;
+    background: #0e1f1a;
+    color: #fff;
+    font-size: 14px;
+    transition: border 0.3s, background 0.3s;
+}
+
+.field input::placeholder {
+    color: #7fa59a;
+}
+
+.field input:focus {
+    outline: none;
+    border-color: #2ea36a;
+    background: #102821;
+}
+
+/* Checkbox */
+
+.check-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 18px 0;
+    font-size: 14px;
+    color: #d3eadd;
+}
+
+.check-group input {
+    width: 16px;
+    height: 16px;
+}
+
+/* Botão */
+
+.confirm-btn {
+    margin-top: 20px;
+    width: 100%;
+    padding: 14px;
+    border-radius: 14px;
+    border: none;
+    background: linear-gradient(135deg, #2ea36a, #1f7a52);
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.confirm-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(46,163,106,0.4);
+}
+
+/* ===== ADMIN ===== */
+
+.lista-admin {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.item-admin {
+    background: #0e1f1a;
+    padding: 12px 14px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+    color: #d3eadd;
+}
+
+.item-admin .numero {
+    width: 26px;
+    height: 26px;
+    background: linear-gradient(135deg, #2ea36a, #1f7a52);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.item-admin .nome small {
+    display: block;
+    font-size: 12px;
+    color: #8fd6b5;
+    margin-top: 2px;
+}
+
+.empty {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #7fa59a;
+}
+
+/* ===== ADMIN | LISTA COM SCROLL ===== */
+
+.lista-admin {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    max-height: 320px;      /* altura máxima da lista */
+    overflow-y: auto;       /* ativa scroll vertical */
+    padding-right: 6px;     /* espaço p/ scrollbar */
+}
+
+/* Scroll bonito (Chrome / Edge) */
+.lista-admin::-webkit-scrollbar {
+    width: 6px;
+}
+
+.lista-admin::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.lista-admin::-webkit-scrollbar-thumb {
+    background: #2ea36a;
+    border-radius: 6px;
+}
+
+/* Firefox */
+.lista-admin {
+    scrollbar-width: thin;
+    scrollbar-color: #2ea36a transparent;
+}
+
+/* ===== ADMIN | AÇÕES ===== */
+
+.admin-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin: 15px 0;
+}
+
+.btn-clear {
+    padding: 8px 14px;
+    border-radius: 10px;
+    border: none;
+    background: linear-gradient(135deg, #a32e2e, #7a1f1f);
+    color: #fff;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-clear:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(163,46,46,0.4);
+}
+
+/* ===============================
+   RESPONSIVO - MOBILE
+================================ */
+
+@media (max-width: 480px) {
+
+    body {
+        padding: 20px;
+        align-items: flex-start;
+    }
+
+    .container,
+    .confirm-container {
+        width: 100%;
+        max-width: 100%;
+        padding: 28px 22px;
+        border-radius: 16px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    .subtitle {
+        font-size: 13px;
+    }
+
+    .invite-text.highlight {
+        font-size: 15px;
+    }
+
+    .invite-text.highlight span {
+        font-size: 13px;
+    }
+
+    .info p {
+        font-size: 14px;
+    }
+
+    /* AÇÕES (ícones) */
+    .actions {
+        gap: 14px;
+    }
+
+    .icon-circle {
+        width: 64px;
+        height: 64px;
+        font-size: 22px;
+    }
+
+    .action-item span {
+        font-size: 11px;
+    }
+
+    /* FORM */
+    .field input {
+        padding: 13px;
+        font-size: 14px;
+    }
+
+    .confirm-btn {
+        padding: 13px;
+        font-size: 14px;
+    }
+
+    /* ADMIN */
+    .lista-admin {
+        max-height: 260px;
+    }
+
+    .item-admin {
+        font-size: 13px;
+        padding: 10px 12px;
+    }
+
+    .item-admin .numero {
+        width: 24px;
+        height: 24px;
+        font-size: 12px;
+    }
+
+    .admin-actions {
+        justify-content: center;
+    }
+
+    .btn-clear {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* ===== CONTADOR REGRESSIVO ===== */
+
+.contador {
+    margin-top: 18px;
+    padding: 12px;
+    border-radius: 12px;
+    background: #0e1f1a;
+    color: #8fd6b5;
+    font-size: 14px;
+    text-align: center;
+    box-shadow: inset 0 0 0 1px rgba(46,163,106,0.25);
+}
+
+.contador strong {
+    color: #ffffff;
+    font-weight: 700;
+}
+
+/* ===== CONTADOR DE CONFIRMADOS ===== */
+
+.resumo-admin {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.resumo-item {
+    flex: 1;
+    background: #111;
+    border-radius: 10px;
+    padding: 12px;
+    text-align: center;
+    color: #fff;
+}
+
+.resumo-item strong {
+    font-size: 22px;
+    display: block;
+    color: #a855f7; /* roxo */
+}
+
+.resumo-item span {
+    font-size: 13px;
+    opacity: 0.8;
+}
+
+/* ===== PAGINA DE SUCESSO ===== */
+
+.success-container {
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.success-icon {
+    font-size: 60px;
+    margin-bottom: 15px;
+}
+
+.success-text {
+    font-size: 16px;
+    margin: 15px 0 25px;
+    line-height: 1.5;
+    opacity: 0.9;
+}
+
+/* ===== BOTÕES PÁGINA DE SUCESSO ===== */
+
+.success-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.success-btn {
+    flex: 1;
+    text-align: center;
+    padding: 14px 12px;
+    border-radius: 14px;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* ===== TEXTO DE SUCESSO ELEGANTE ===== */
+
+.success-text {
+    margin-top: 10px;
+    line-height: 1.6;
+}
+
+.success-name {
+    display: block;
+    font-size: 15px;
+    font-weight: 500;
+    color: #eaf6f1;
+    margin-bottom: 8px;
+}
+
+.success-line {
+    display: block;
+    font-size: 13px;
+    color: #8fd6b5;
+    opacity: 0.9;
+}
+
+/* Botão principal */
+.success-btn.primary {
+    background: linear-gradient(135deg, #2ea36a, #1f7a52);
+    color: #fff;
+    box-shadow: 0 10px 25px rgba(46,163,106,0.4);
+}
+
+/* Botão secundário */
+.success-btn.secondary {
+    background: #0e1f1a;
+    color: #d3eadd;
+    border: 1px solid #2ea36a;
+}
+
+/* Hover */
+.success-btn:hover {
+    transform: translateY(-2px);
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .success-actions {
+        flex-direction: column;
+    }
+}
+
+/* ===== AÇÕES ADMIN ===== */
+
+.admin-actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.admin-btn {
+    flex: 1;
+    padding: 12px;
+    border-radius: 12px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* Sair */
+.admin-btn.sair {
+    background: #0e1f1a;
+    color: #d3eadd;
+    border: 1px solid #2ea36a;
+}
+
+/* Limpar lista */
+.admin-btn.danger {
+    background: linear-gradient(135deg, #b02a2a, #7a1f1f);
+    color: #fff;
+}
+
+.admin-btn:hover {
+    transform: translateY(-2px);
+}
+
+/* ===== AVISO PÓS-CONFIRMAÇÃO ===== */
+
+.success-aviso {
+    margin: 20px 0 25px;
+    padding: 14px 16px;
+    border-radius: 14px;
+    background: rgba(46, 163, 106, 0.08);
+    border: 1px solid rgba(46, 163, 106, 0.35);
+    text-align: left;
+}
+
+.success-aviso .titulo {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #8fd6b5;
+}
+
+.success-aviso ul {
+    list-style: none;
+    font-size: 13px;
+    color: #d3eadd;
+}
+
+.success-aviso ul li {
+    margin-bottom: 6px;
+}
+
+.agenda-subtle {
+    margin-top: 6px;
+    margin-bottom: 12px;
+    font-size: 13px;
+}
+
+.agenda-subtle a {
+    color: #8fd6b5;
+    text-decoration: none;
+    opacity: 0.75;
+}
+
+.agenda-subtle a:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+.item-admin {
+    background: #0e1f1a;
+    padding: 12px 14px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    /* gap: 12px;  remover o gap entre todos */
+    font-size: 14px;
+    color: #d3eadd;
+}
+
+/* Faz o nome ocupar todo o espaço disponível */
+.item-admin .nome {
+    flex: 1; /* ocupa espaço entre número e botão */
+}
+
+/* Botão da lixeira fica no canto direito */
+.item-admin .btn-delete {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    opacity: 0.5;
+    margin-left: 12px; /* espaço entre nome e botão */
+}
+
+.item-admin .btn-delete:hover {
+    opacity: 1;
+}
+
+/* Botão voltar dentro do card, canto superior direito */
+.btn-voltar {
+    position: absolute; /* relativo ao confirm-container */
+    top: 12px;
+    right: 12px;
+    padding: 6px 12px;
+    background: linear-gradient(135deg, #2ea36a, #1f7a52);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: bold;
+    transition: transform 0.2s, box-shadow 0.2s;
+    z-index: 10; /* garante que fique acima do conteúdo */
+}
+
+.btn-voltar:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(46,163,106,0.4);
+}
+
+/* Garante que o container seja relativo para posicionamento absoluto do botão */
+.confirm-container {
+    position: relative;
+}

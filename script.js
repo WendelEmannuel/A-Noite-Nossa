@@ -150,7 +150,7 @@ async function limparLista() {
 const contador = document.getElementById("contador");
 
 if (contador) {
-    const dataEvento = new Date("2026-01-31T20:30:00");
+    const dataEvento = new Date("2026-01-31T14:00:00");
 
     function atualizarContador() {
         const agora = new Date();
@@ -217,4 +217,5 @@ if (btnVoltar) {
     btnVoltar.addEventListener("click", () => {
         window.location.href = "index.html";
     });
+
 }
